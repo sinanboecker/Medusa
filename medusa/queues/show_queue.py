@@ -754,6 +754,7 @@ class QueueItemAdd(ShowQueueItem):
             log.warning('Unable to add series: {0!r}'.format(error))
             self.success = False
             self._finish_early()
+            message_step('failed')
             log.debug(traceback.format_exc())
             return
 
